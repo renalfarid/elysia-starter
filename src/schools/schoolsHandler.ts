@@ -1,6 +1,6 @@
 import { Connection } from "mysql2/promise";
 
-export const getSchools = async (connection: Connection) => {
+export const fetchSchools = async (connection: Connection) => {
   try {
     const [rows] = await connection.execute("SELECT * FROM sekolah");
 
