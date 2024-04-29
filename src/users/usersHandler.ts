@@ -2,7 +2,7 @@ import { Connection } from "mysql2/promise";
 
 export const fetchUsers = async (connection: Connection) => {
   try {
-    const [rows] = await connection.execute("SELECT * FROM users");
+    const [rows] = await connection.execute("SELECT name, email FROM users");
 
     return rows;
   } catch (error) {
